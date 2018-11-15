@@ -11,7 +11,7 @@ publication: '*Science of Surveying and Mapping*'
 publication_types:
 - "2"
 selected: "false"
-title: Spatio-Temporal Modelling and Prediction of $\text{PM}_{2.5}$ Concentration
+title: Spatio-Temporal Modelling and Prediction of PM2.5 Concentration
   based on Bayesian Methods (Chinese)
 ---
 

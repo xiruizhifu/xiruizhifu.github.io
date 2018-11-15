@@ -11,7 +11,7 @@ publication: '*Geoscience and Remote Sensing Symposium (IGARSS), 2015 IEEE Inter
 publication_types:
 - "1"
 selected: "false"
-title: An estimate of population exposure to automobile source $\text{PM}_{2.5}$ in
+title: An estimate of population exposure to automobile source PM2.5 in
   Beijing using spatiotemporal analysis
 ---
 

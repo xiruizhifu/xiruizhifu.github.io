@@ -10,7 +10,6 @@ publication: '*Science of Surveying and Mapping*'
 publication_types:
 - "2"
 selected: "false"
-title: Real time prediction of $\text{PM}_{2.5}$ concentration based on support vector
-  regresion algorithms
+title: Real time prediction of PM2.5 concentration based on support vector regresion algorithms
 ---
 
