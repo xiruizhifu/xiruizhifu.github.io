@@ -1,0 +1,68 @@
+.reveal, .reveal p {
+  font-family: "Iowan Old Style", "Kaiti SC", serif;
+  line-height: 1.9;
+}
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: "Iowan Old Style", "Kaiti SC", serif;
+  line-height: 2.0;
+  text-transform: none;
+}
+
+.reveal h1 {
+  font-size: 1.5em;
+}
+
+.reveal h2 {
+  font-size: 1.3em;
+}
+
+.reveal pre code {
+  font-family: Monaco, monospace;
+  line-height: 1.9;
+  font-size: 0.9em;
+}
+
+.reveal code {
+  font-family: Monaco, monospace;
+  line-height: 1.9;
+  font-size: 0.8em;
+  color: lightskyblue;
+}
+
+.reveal ul li,
+.reveal ol li {
+  font-family: "Iowan Old Style", "Kaiti SC", serif;
+  line-height: 1.9;
+  font-size: 0.8em;
+}
+
+#left {
+  left:-8.33%;
+  text-align: left;
+  float: left;
+  width:50%;
+  z-index:-10;
+}
+
+#right {
+  left:31.25%;
+  top: 75px;
+  float: right;
+  text-align: left;
+  z-index:-10;
+  width:50%;
+}
+
+.container{
+  display: flex;
+}
+
+.col{
+  flex: 1;
+}
