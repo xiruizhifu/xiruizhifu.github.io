@@ -125,7 +125,7 @@ enableGitInfo = false
   #   Examples: "Mon, Jan 2, 2006" or "2006-01-02"
   date_format = "Mon, Jan 2, 2006"
   #   Examples: "3:04 pm" or "15:04"
-  time_format = "06:18"
+  time_format = "16:18"
 
   # Show estimated reading time for posts?
   reading_time = true
@@ -202,7 +202,7 @@ enableGitInfo = false
   # Configuration of talk pages.
   [params.talks]
     # Show talk time?
-    time = true
+    time = false
 
   # Configuration of publication pages.
   [params.publications]
@@ -298,10 +298,10 @@ enableGitInfo = false
   url = "#projects"
   weight = 2
 
-[[menu.main]]
-  name = "Talks"
-  url = "#talks"
-  weight = 3
+# [[menu.main]]
+#   name = "Talks"
+#   url = "#talks"
+#   weight = 3
 
 [[menu.main]]
   name = "Posts"

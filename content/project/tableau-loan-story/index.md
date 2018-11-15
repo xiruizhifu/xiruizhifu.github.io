@@ -4,7 +4,7 @@ external_link: https://public.tableau.com/views/ProsperLoanData_4/StoryFinalVers
 image:
   caption: Tableau Data Story
   focal_point: Smart
-summary: "A Story about the Online Personal Loan Business. [Read more](https://www.yajiez.me/en/2017/08/10/prosper-loan-business-story-tableau/)"
+summary: "A Story about the Online Personal Loan Business. [Read more](https://www.yajiez.me/2017/08/10/prosper-loan-business-story-tableau/)"
 tags:
 - Data Science
 title: Create a Data Story using Tableau
