@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Source Themes Academic 3.1.1">
+  <meta name="generator" content="Hugo 0.50" />
+  <meta name="author" content="Yajie Zhu">
+
+  
+  
+  
+  
+    
+  
+  <meta name="description" content="Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it&#39;s important to address the default risk for this business. In this story, we explored many aspects for personal loan business based on the Prosper Loan Dataset, including the default rates across different states of US, the factors that have clear impact on default rate, etc.">
+
+  
+  <link rel="alternate" hreflang="en-us" href="/2017/08/10/prosper-loan-business-story-tableau/">
+
+  
+
+
+  
+
+  
+
+  
+
+  
+  
+  
+  <meta name="theme-color" content="#3f51b5">
+  
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css" integrity="sha256-uFVgMKfistnJAfoCUQigIl+JfUaP47GrRKjf6CTPVmw=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" integrity="sha256-ygkqlh3CYSUri3LhQxzdcm0n1EQvH2Y+U5S2idbLtxs=" crossorigin="anonymous">
+
+    
+    
+    
+      
+    
+    
+      
+      
+        
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" crossorigin="anonymous">
+        
+      
+    
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css" integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ==" crossorigin="anonymous">
+    
+
+    
+
+  
+
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Playfair+Display:400,700|Fauna+One">
+  
+
+  <link rel="stylesheet" href="/styles.css">
+  
+  <link rel="stylesheet" href="/css/custom.css">
+  
+
+  
+  
+  
+
+  
+  <link rel="alternate" href="/index.xml" type="application/rss+xml" title="Yajie">
+  <link rel="feed" href="/index.xml" type="application/rss+xml" title="Yajie">
+  
+
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/icon-192.png">
+
+  <link rel="canonical" href="/2017/08/10/prosper-loan-business-story-tableau/">
+
+  <meta property="twitter:card" content="summary_large_image">
+  
+  <meta property="twitter:site" content="@datantist">
+  <meta property="twitter:creator" content="@datantist">
+  
+  <meta property="og:site_name" content="Yajie">
+  <meta property="og:url" content="/2017/08/10/prosper-loan-business-story-tableau/">
+  <meta property="og:title" content="A Story about Prosper Online Loan Business using Tableau | Yajie">
+  <meta property="og:description" content="Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it&#39;s important to address the default risk for this business. In this story, we explored many aspects for personal loan business based on the Prosper Loan Dataset, including the default rates across different states of US, the factors that have clear impact on default rate, etc.">
+  
+  
+    
+  <meta property="og:image" content="/img/icon.png">
+  <meta property="og:locale" content="en-us">
+  
+  <meta property="article:published_time" content="2017-08-10T00:00:00&#43;00:00">
+  
+  <meta property="article:modified_time" content="2017-08-10T00:00:00&#43;00:00">
+  
+
+  
+
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.3/cookieconsent.min.js"></script>
+<script>
+  window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#3f51b5",
+          "text": "#fff"
+        },
+        "button": {
+          "background": "#fff",
+          "text": "#3f51b5"
+        }
+      },
+      "theme": "classic",
+      "content": {
+        "message": "This website uses cookies to ensure you get the best experience on our website.",
+        "dismiss": "Got it!",
+        "link": "Learn more",
+        "href": "/privacy/"
+      }
+    })});
+</script>
+
+
+  
+
+  <title>A Story about Prosper Online Loan Business using Tableau | Yajie</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#TableOfContents" data-offset="71" >
+
+<nav class="navbar navbar-light fixed-top navbar-expand-lg py-0" id="navbar-main">
+  <div class="container">
+
+    
+      <a class="navbar-brand" href="/">Yajie</a>
+      
+      <button type="button" class="navbar-toggler" data-toggle="collapse"
+              data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+      
+
+    
+    <div class="collapse navbar-collapse" id="navbar">
+
+      
+      
+      <ul class="navbar-nav ml-auto">
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">
+            
+            <span>Home</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#projects">
+            
+            <span>Projects</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#posts">
+            
+            <span>Posts</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#publications">
+            
+            <span>Publications</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        
+        
+        
+          
+        
+
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">
+            
+            <span>Contact</span>
+            
+          </a>
+        </li>
+
+        
+        
+
+      
+
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article" itemscope itemtype="http://schema.org/Article">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+  
+  
+<div class="article-container pt-3">
+  <h1 itemprop="name">A Story about Prosper Online Loan Business using Tableau</h1>
+
+  
+
+  
+    
+
+<div class="article-metadata">
+
+  
+  
+  <span itemscope itemprop="author" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yajie Zhu">
+  </span>
+  
+
+  <span class="article-date">
+    
+    <meta content="2017-08-10 00:00:00 &#43;0000 UTC" itemprop="datePublished">
+    <time datetime="2017-08-10 00:00:00 &#43;0000 UTC" itemprop="dateModified">
+      Thu, Aug 10, 2017
+    </time>
+  </span>
+  <span itemscope itemprop="publisher" itemtype="http://schema.org/Person">
+    <meta itemprop="name" content="Yajie Zhu">
+  </span>
+
+  
+  <span class="middot-divider"></span>
+  <span class="article-reading-time">
+    6 min read
+  </span>
+  
+
+  
+  
+
+  
+  
+  
+  <span class="middot-divider"></span>
+  <span class="article-categories">
+    <i class="fas fa-folder"></i>
+    
+    <a href="/categories/data-science/">Data Science</a>
+    
+  </span>
+  
+  
+
+  
+  
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=A%20Story%20about%20Prosper%20Online%20Loan%20Business%20using%20Tableau&amp;url=%2f2017%2f08%2f10%2fprosper-loan-business-story-tableau%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=%2f2017%2f08%2f10%2fprosper-loan-business-story-tableau%2f"
+         target="_blank" rel="noopener">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=%2f2017%2f08%2f10%2fprosper-loan-business-story-tableau%2f&amp;title=A%20Story%20about%20Prosper%20Online%20Loan%20Business%20using%20Tableau"
+         target="_blank" rel="noopener">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=%2f2017%2f08%2f10%2fprosper-loan-business-story-tableau%2f&amp;title=A%20Story%20about%20Prosper%20Online%20Loan%20Business%20using%20Tableau"
+         target="_blank" rel="noopener">
+        <i class="fab fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=A%20Story%20about%20Prosper%20Online%20Loan%20Business%20using%20Tableau&amp;body=%2f2017%2f08%2f10%2fprosper-loan-business-story-tableau%2f">
+        <i class="fas fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+  
+
+</div>
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h2 id="project-links">Project Links</h2>
+
+<p><a href="https://github.com/yajiez/create-tableau-story" target="_blank">GitHub Links</a></p>
+
+<p><strong>Tableau Public Workbooks:</strong></p>
+
+<ul>
+<li><p>Story First Version: <a href="https://public.tableau.com/shared/Y6H9T3577?:display_count=yes" target="_blank">Click Here</a></p></li>
+
+<li><p>Story Final Version: <a href="https://public.tableau.com/views/ProsperLoanData_4/StoryFinalVersion?:embed=y&amp;:display_count=yes" target="_blank">Click Here</a></p></li>
+</ul>
+
+<div><img src="/img/prosper-loan-final-story.png" width="90%"></div>
+
+<h2 id="summary">Summary</h2>
+
+<p>Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it&rsquo;s important to address the default risk for this business. In this story, we explored many aspects for personal loan business based on the <a href="https://www.prosper.com" target="_blank">Prosper</a> Loan Dataset, including the default rates across different states of US, sereval factors which have clear impact on default rate, etc. Moreover, this analysis showed that higher risk loans don&rsquo;t guarantee higher return so a useful tip for investors was given.</p>
+
+<h2 id="personal-loan-business-over-time">Personal Loan Business over Time</h2>
+
+<p>Since 2009, the online personal loan business has increased steadily and climbed up quickly since 2013 and then droped down at the beginning of 2014. However, the borrower credit score has went down over time.</p>
+
+<p><img src="/post/prosper-loan-tableau/prosper-loan-trends.png" alt="" /></p>
+
+<h2 id="default-rates-across-us">Default Rates across US</h2>
+
+<p>Default rates for different states of US have obvious variance, and the default rate in some states were higher than 30%.</p>
+
+<p><img src="/post/prosper-loan-tableau/prosper-loan-map.png" alt="" /></p>
+
+<h2 id="relevant-factors-about-the-default-rate">Relevant Factors about the Default Rate</h2>
+
+<p>Higher Income, Lower BorrowerRate and Better Credit Rating imply Lower Default Rate. An interesting pattern was found among the college student group which shows that higher grade students would have more loans and lower default rate, with exception for sophomore student.</p>
+
+<p><img src="/post/prosper-loan-tableau/prosper-loan-default-rate-factors.png" alt="" /></p>
+
+<h2 id="higher-return-higher-risk">Higher Return, Higher Risk</h2>
+
+<p>It&rsquo;s clearly that ProsperRating is a good indicator and the general principle is: <strong>higher return means higher risk</strong>. However, loans with rating HR have the highest risk but don&rsquo;t have the highest estimated return and loans with C&amp;D have higher actual principal loss than E&amp;HR. So don&rsquo;t put your money in C&amp;D loans.</p>
+
+<p><img src="/post/prosper-loan-tableau/prosper-loan-risk.png" alt="" /></p>
+
+<h2 id="final-story">Final Story</h2>
+
+<p><img src="/post/prosper-loan-tableau/prosper-loan-final-story.png" alt="" /></p>
+
+<p>You can found the online version of this story <a href="https://public.tableau.com/views/ProsperLoanData_4/StoryFinalVersion?:embed=y&amp;:display_count=yes" target="_blank">Here</a>.</p>
+
+<h2 id="additional-information">Additional Information</h2>
+
+<h3 id="design-of-the-first-version">Design of the First Version</h3>
+
+<p>The prosper dataset is a complex dataset which contains 113,937 loans with 81 variables, so before I began to create the visualisation, I asked one question to myself again and agian:</p>
+
+<ul>
+<li><strong>What do I want to learn from this dataset?</strong></li>
+</ul>
+
+<p>My answer was: The most important things that I cared about for this dataset are the status and the relevant factors about the <strong>default rate</strong>. So the story about this dataset was focus on the default rate and I divided them into three groups:</p>
+
+<ul>
+<li>Trends of the loans over time and the spatial distribution of the default rate;</li>
+<li>The relationships between the default rate and the relevant factors;</li>
+<li>Interesting patterns and useful insights that were found in this process.</li>
+</ul>
+
+<p><strong>Group One</strong></p>
+
+<ul>
+<li><strong>Trends of the loans over time:</strong> Line Chart;</li>
+<li><strong>Trends of the ProsperScore over time:</strong> Line Chart;</li>
+<li><strong>Spatial distribution of the default rate</strong>: Thematic Maps.</li>
+</ul>
+
+<p>In order to see whether each state had the similar tread or not, I chose to use different colors to stand for different state. Also, I created an action to connect the trends of the loans and the default rate map.</p>
+
+<p><strong>Group Two</strong></p>
+
+<p>I found three obvious relevant factors of the default rate, so I made three visualisations to show the relatioships between them:</p>
+
+<ul>
+<li><strong>Default rate &amp; IncomeRange:</strong> Bar Chart;</li>
+<li><strong>Default rate &amp; ProsperRating:</strong> Stacked Bar Chart, with one bar for each <code>ProsperRating</code> and using color to stand for each <code>IncomeRange</code> within that <code>ProsperRating</code> loans;</li>
+<li><strong>Default rate &amp; BorrowerRate:</strong> Scatter Plot, with using color to stand for each <code>Occupation</code>, and I added a filter for different <code>ProsperRating</code>. Also, I found an interesting patter about the college student group, so I created a group named &ldquo;College Student&rdquo;, and then used &ldquo;size&rdquo; to encode this new group variable to make the &ldquo;College Student&rdquo; standing out.</li>
+</ul>
+
+<p>For the interesting patter about the &ldquo;College Student&rdquo; group, I created a new chart to show the loans number and default rate among them:</p>
+
+<ul>
+<li><strong>Default rate of the College Student:</strong> I used two Bar Charts to show the loans number and defualt rate for different grade of the college students. And I used the &ldquo;red color&rdquo; to draw attention for the &ldquo;Sophomore&rdquo; student.</li>
+</ul>
+
+<p><strong>Group Three</strong></p>
+
+<p>Based on the analysis I found that <code>ProsperRating</code> is a good indicator for the default risk of the loans, so I created four bar charts to show <code>EstimatedEffectiveYield</code>, <code>EstimatedLoss</code>, <code>EstimatedReturn</code>, and the Actual Net Principal Loss for loans of different rating. Also, I used &ldquo;color&rdquo; to draw attention for the &ldquo;HR&rdquo;, &ldquo;C&rdquo;, &ldquo;D&rdquo; loans.</p>
+
+<p>Finally, I came up a 3-steps story as follows:</p>
+
+<ol>
+<li>Demonstrate the trends and status of the Loans using time series line plot and thematic map;</li>
+<li>Explore the relationships between the default rate and its relevant factors;</li>
+<li>Emphasise that higher return means higher risk, and tell the audience don&rsquo;t put money in C&amp;D loans based on this dataset.</li>
+</ol>
+
+<h3 id="changes-after-feedback">Changes after Feedback</h3>
+
+<p>I sent my story to a friend and the response was that it looks like a mess. Well, so sad.</p>
+
+<p>The main point was that I put too many charts in just one screen, and the elements were not rendered clearly in the laptop screen, which would make people stop reading this story entirely.</p>
+
+<p>Upon hearing this feedback I realized that I didn&rsquo;t take different screen sizes of various kinds of the devices today into consideration. I just chose the automatic layout and tweak them to look pretty on my own laptop which has a very high resolution.</p>
+
+<p>Therefore, I divided the 3-steps story into a 5-steps story, and the important changes were:</p>
+
+<ul>
+<li>In the step 1 of the original story, I created a line chart of the loans number as well as the loans amount, and the trends of them were quite similar, so I removed the line chart of the loans number because the loans amount is more imoortant than the loan number. After the removal of one line chart, it looks more clearly and tidy;</li>
+<li>In the step 2 of the original story, I put all the relevant factors into one place, which made it a messy and different to understand, so I divided the step 2 of the original story into 3 pieces and ordered them in a way which is easy to follow;</li>
+<li>In the step 3 of the original story, I created four bar charts to show <code>EstimatedEffectiveYield</code>, <code>EstimatedLoss</code>, <code>EstimatedReturn</code>, and the Actual Net Principal Loss for loans of different rating. However, it&rsquo;s not necessary to put all of the <code>EstimatedEffectiveYield</code>, <code>EstimatedLoss</code>, <code>EstimatedReturn</code> together, only the <code>EstimatedLoss</code> and <code>EstimatedReturn</code> would be enough, so I removed the <code>EstimatedEffectiveYield</code> bar chart;</li>
+<li>Besides, I realized that the caption boxes of the original story occupied some place, but there were some unused space in the charts themselves. What is more, widescreen is very common now so the vertical space is really precious. As a result, I decided to change the navagator style from &ldquo;Caption boxes&rdquo; to &ldquo;Numbers&rdquo;, and rewrote the most important information of the &ldquo;Caption boxes&rdquo; then added them as &ldquo;text&rdquo; in or under the blank space of the charts.</li>
+</ul>
+
+<p>Finally, I modified the original 3-steps story into a 5-steps story and changed the navagator style from &ldquo;Caption boxes&rdquo; to &ldquo;Numbers&rdquo;.</p>
+
+<h2 id="resources">Resources</h2>
+
+<ul>
+<li><a href="http://onlinehelp.tableau.com/current/pro/desktop/en-us/default.html" target="_blank">Tableau Online Help</a></li>
+</ul>
+
+    </div>
+
+    
+
+
+<div class="article-tags">
+  
+  <a class="badge badge-light" href="/tags/data-visualisation/">Data Visualisation</a>
+  
+  <a class="badge badge-light" href="/tags/tableau/">Tableau</a>
+  
+</div>
+
+
+
+    
+
+
+
+
+
+
+<div class="media author-card" itemscope itemtype="http://schema.org/Person">
+  
+  <img class="portrait mr-3" src="/img/yajiez.jpg" itemprop="image" alt="Avatar">
+  
+  <div class="media-body">
+    <h5 class="card-title" itemprop="name"><a href="/">Yajie Zhu</a></h5>
+    <h6 class="card-subtitle">Machine Learning Scientist</h6>
+    
+    <ul class="network-icon" aria-hidden="true">
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="/#contact" >
+          <i class="fas fa-envelope"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://scholar.google.co.uk/citations?user=ChTprxEAAAAJ&amp;hl=en" target="_blank" rel="noopener">
+          <i class="ai ai-google-scholar"></i>
+        </a>
+      </li>
+      
+      
+      
+      
+        
+      
+      
+      
+      
+      
+        
+      
+      <li>
+        <a itemprop="sameAs" href="https://github.com/yajiez" target="_blank" rel="noopener">
+          <i class="fab fa-github"></i>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+
+
+
+    
+    
+
+    
+
+    
+
+
+  </div>
+</article>
+
+<div class="container">
+  <footer class="site-footer">
+  <p class="powered-by">
+    &copy; Yajie Zhu 2016 - 2018 
+
+    
+    <span class="float-right" aria-hidden="true">
+      <a href="#" id="back_to_top">
+        <span class="button_icon">
+          <i class="fas fa-chevron-up fa-2x"></i>
+        </span>
+      </a>
+    </span>
+    
+  </p>
+</footer>
+
+</div>
+
+
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Cite</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <pre><code class="tex hljs"></code></pre>
+      </div>
+      <div class="modal-footer">
+        <a class="btn btn-outline-primary my-1 js-copy-cite" href="#" target="_blank">
+          <i class="fas fa-copy"></i> Copy
+        </a>
+        <a class="btn btn-outline-primary my-1 js-download-cite" href="#" target="_blank">
+          <i class="fas fa-download"></i> Download
+        </a>
+        <div id="modal-error"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+    
+    
+    <script src="/js/mathjax-config.js"></script>
+    
+
+    
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha256-VsEqElsCHSGmnmHXGQzvoWjWwoznFSZc6hs7ARLRacQ=" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+
+      
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js" integrity="sha256-/BfiIkHlHoVihZdc6TFuj7MmJ0TWcWsMXkeDFwhi0zw=" crossorigin="anonymous"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/python.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/r.min.js"></script>
+        
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/sql.min.js"></script>
+        
+      
+
+      
+      
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS_CHTML-full" integrity="sha256-GhM+5JHb6QUzOQPXSJLEWP7R73CbkisjzK5Eyij4U9w=" crossorigin="anonymous" async></script>
+      
+    
+
+    
+    
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.js" integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log==" crossorigin="anonymous"></script>
+    
+
+    
+    
+    
+
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+    <script>
+      const search_index_filename = "/index.json";
+      const i18n = {
+        'placeholder': "Search...",
+        'results': "Search Results",
+        'no_results': "No results found"
+      };
+      const content_type = {
+        'post': "Posts",
+        'project': "Projects",
+        'publication' : "Publications",
+        'talk' : "Talks"
+        };
+    </script>
+    
+
+    
+    
+
+    
+    
+    <script id="search-hit-fuse-template" type="text/x-template">
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+    
+
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js" integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js" integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="/js/academic.min.2861db6bcf2db4b5eade32c795453e47.js"></script>
+
+    
+
+  </body>
+</html>
+

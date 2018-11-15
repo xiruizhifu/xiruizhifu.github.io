@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1 on Yajie</title>
+    <link>/publication_types/1/</link>
+    <description>Recent content in 1 on Yajie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Yajie Zhu 2016 - 2018</copyright>
+    <lastBuildDate>Thu, 01 Jan 2015 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/publication_types/1/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>An estimate of population exposure to automobile source PM2.5 in Beijing using spatiotemporal analysis</title>
+      <link>/publication/feng_estimate_2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_estimate_2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bounding the role of domestic heating in haze pollution of Beijing based on satellite and surface observations</title>
+      <link>/publication/feng_bounding_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_bounding_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System Design of a Simulation System for Hazardous Chemicals Leakage</title>
+      <link>/publication/yajie_zhu_system_2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/yajie_zhu_system_2013/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

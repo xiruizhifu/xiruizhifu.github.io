@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on Yajie</title>
+    <link>/tags/deep-learning/</link>
+    <description>Recent content in Deep Learning on Yajie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Yajie Zhu 2016 - 2018</copyright>
+    <lastBuildDate>Fri, 16 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Deep Learning for Medicine and Healthcare</title>
+      <link>/talk/deepmed-intro/</link>
+      <pubDate>Fri, 16 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/talk/deepmed-intro/</guid>
+      <description>Click on the Slides button above to view the built-in slides feature.
+ </description>
+    </item>
+    
+  </channel>
+</rss>

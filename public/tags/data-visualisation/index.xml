@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Visualisation on Yajie</title>
+    <link>/tags/data-visualisation/</link>
+    <description>Recent content in Data Visualisation on Yajie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Yajie Zhu 2016 - 2018</copyright>
+    <lastBuildDate>Thu, 10 Aug 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/data-visualisation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Story about Prosper Online Loan Business using Tableau</title>
+      <link>/2017/08/10/prosper-loan-business-story-tableau/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/10/prosper-loan-business-story-tableau/</guid>
+      <description>Project Links GitHub Links
+Tableau Public Workbooks:
+ Story First Version: Click Here
+ Story Final Version: Click Here
+   Summary Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it&amp;rsquo;s important to address the default risk for this business.</description>
+    </item>
+    
+  </channel>
+</rss>

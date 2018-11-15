@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Yajie</title>
+    <link>/post/</link>
+    <description>Recent content in Posts on Yajie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Yajie Zhu 2016 - 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>A Story about Prosper Online Loan Business using Tableau</title>
+      <link>/2017/08/10/prosper-loan-business-story-tableau/</link>
+      <pubDate>Thu, 10 Aug 2017 00:00:00 +0000</pubDate>
+      
+      <guid>/2017/08/10/prosper-loan-business-story-tableau/</guid>
+      <description>Project Links GitHub Links
+Tableau Public Workbooks:
+ Story First Version: Click Here
+ Story Final Version: Click Here
+   Summary Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it&amp;rsquo;s important to address the default risk for this business.</description>
+    </item>
+    
+    <item>
+      <title>Hello, CFA</title>
+      <link>/2016/12/02/hello-cfa/</link>
+      <pubDate>Fri, 02 Dec 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/12/02/hello-cfa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Love</title>
+      <link>/2016/11/11/love-is-like-the-wind/</link>
+      <pubDate>Fri, 11 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/2016/11/11/love-is-like-the-wind/</guid>
+      <description>  Love is like the wind, you can&#39;t see it but you can feel it~   </description>
+    </item>
+    
+  </channel>
+</rss>

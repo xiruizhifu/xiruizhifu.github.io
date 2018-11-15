@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Publications on Yajie</title>
+    <link>/publication/</link>
+    <description>Recent content in Publications on Yajie</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; Yajie Zhu 2016 - 2018</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/publication/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Prevalence of carotid atherosclerosis and carotid plaque in Chinese adults: A systematic review and meta-regression analysis</title>
+      <link>/publication/peige_song_prevalence_2018/</link>
+      <pubDate>Mon, 01 Jan 2018 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/peige_song_prevalence_2018/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Real time prediction of PM2.5 concentration based on support vector regresion algorithms</title>
+      <link>/publication/yajie_zhu_real_2016/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/yajie_zhu_real_2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Spatio-Temporal Modelling and Prediction of PM2.5 Concentration based on Bayesian Methods (Chinese)</title>
+      <link>/publication/yajie_zhu_spatio-temporal_2016/</link>
+      <pubDate>Fri, 01 Jan 2016 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/yajie_zhu_spatio-temporal_2016/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>An estimate of population exposure to automobile source PM2.5 in Beijing using spatiotemporal analysis</title>
+      <link>/publication/feng_estimate_2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_estimate_2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Artificial neural networks forecasting of PM2.5 pollution using air mass trajectory based geographic model and wavelet transformation</title>
+      <link>/publication/feng_artificial_2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_artificial_2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remote Sensing Image Super-Resolution Method Using Sparse Representation and Classified Texture Patches</title>
+      <link>/publication/shuai_liu_remote_2015/</link>
+      <pubDate>Thu, 01 Jan 2015 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/shuai_liu_remote_2015/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Analysis of the quality of child health care and regional dissimilarity in China (Chinese)</title>
+      <link>/publication/peige_song_analysis_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/peige_song_analysis_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Bounding the role of domestic heating in haze pollution of Beijing based on satellite and surface observations</title>
+      <link>/publication/feng_bounding_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_bounding_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Formation and dominant factors of haze pollution over Beijing and its peripheral areas in winter</title>
+      <link>/publication/feng_formation_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/feng_formation_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study on Seasonal Variation of Urban Heat Island with HJ-1B Satellite Imagery: A Case Study of Beijing (Chinese)</title>
+      <link>/publication/shuai_liu_study_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/shuai_liu_study_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Study on technological framework of Smart City based on Big Data (Chinese)</title>
+      <link>/publication/yajie_zhu_study_2014/</link>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/yajie_zhu_study_2014/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Assessing spatial accessibility to maternity units in Shenzhen, China</title>
+      <link>/publication/song_assessing_2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/song_assessing_2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>System Design of a Simulation System for Hazardous Chemicals Leakage</title>
+      <link>/publication/yajie_zhu_system_2013/</link>
+      <pubDate>Tue, 01 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/yajie_zhu_system_2013/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web-oriented Spatial Information Extraction System (Chinese)</title>
+      <link>/publication/xi_mao_web-oriented_2012/</link>
+      <pubDate>Sun, 01 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>/publication/xi_mao_web-oriented_2012/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
