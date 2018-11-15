@@ -16,7 +16,8 @@ item:
   overlay_img: headers/bubbles-wide.jpg
   title: Deep Learning for Healthcare<br><br>
 - align: center
-  content: SmartAI is a smart Python Library for Artificial Intelligence uses PyTorch as the backend autograd engine :rocket:<br><br>
+  content: SmartAI is a smart Python Library for Artificial Intelligence uses PyTorch
+    as the backend autograd engine :rocket:<br><br>
   cta_icon: ""
   cta_icon_pack: fas
   cta_label: 'Star on GitHub :tada:'

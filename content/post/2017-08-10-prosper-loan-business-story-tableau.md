@@ -1,11 +1,20 @@
 ---
-title: A Story about Prosper Online Loan Business using Tableau
 author: Yajie
-date: '2017-08-10'
+categories:
+- Data Science
+date: "2017-08-10"
 slug: prosper-loan-business-story-tableau
-categories: ["Data Science"]
-tags: ["Data Visualisation", "Tableau"]
-summary: "Personal online loan business has been an important way for borrowers to raise money and for investors to earn interest. However, the risk of this type of investment is definitely higher than T-bills, T-notes and T-bonds, so it's important to address the default risk for this business. In this story, we explored many aspects for personal loan business based on the Prosper Loan Dataset, including the default rates across different states of US, the factors that have clear impact on default rate, etc."
+summary: Personal online loan business has been an important way for borrowers to
+  raise money and for investors to earn interest. However, the risk of this type of
+  investment is definitely higher than T-bills, T-notes and T-bonds, so it's important
+  to address the default risk for this business. In this story, we explored many aspects
+  for personal loan business based on the Prosper Loan Dataset, including the default
+  rates across different states of US, the factors that have clear impact on default
+  rate, etc.
+tags:
+- Data Visualisation
+- Tableau
+title: A Story about Prosper Online Loan Business using Tableau
 ---
 
 ## Project Links

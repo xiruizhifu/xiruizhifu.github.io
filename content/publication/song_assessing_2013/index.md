@@ -1,10 +1,16 @@
-+++
-title = "Assessing spatial accessibility to maternity units in Shenzhen, China"
-date = 2013-01-01
-authors = ["Peige Song", "Yajie Zhu", "Xi Mao", "Qi Li", "Lin An"]
-publication_types = ["2"]
-abstract = ""
-selected = "false"
-publication = "*PLoS One*"
-+++
+---
+abstract: ""
+authors:
+- Peige Song
+- Yajie Zhu
+- Xi Mao
+- Qi Li
+- Lin An
+date: "2013-01-01T00:00:00Z"
+publication: '*PLoS One*'
+publication_types:
+- "2"
+selected: "false"
+title: Assessing spatial accessibility to maternity units in Shenzhen, China
+---
 
