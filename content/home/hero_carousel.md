@@ -9,8 +9,8 @@ item:
     in Python and uses PyTorch as the backend autograd engine :rocket:<br><br>
   cta_icon: ""
   cta_icon_pack: fas
-  cta_label: 'Star on GitHub :tada:'
-  cta_url: https://github.com/yajiez/deepmed
+  cta_label: 'Comming soon :tada:'
+  cta_url: https://github.com/yajiez
   overlay_color: '#666'
   overlay_filter: 0.5
   overlay_img: headers/bubbles-wide.jpg
@@ -20,8 +20,8 @@ item:
     as the backend autograd engine :rocket:<br><br>
   cta_icon: ""
   cta_icon_pack: fas
-  cta_label: 'Star on GitHub :tada:'
-  cta_url: https://github.com/yajiez/smartai
+  cta_label: 'Comming soon :tada:'
+  cta_url: https://github.com/yajiez
   overlay_color: '#666'
   overlay_filter: 0.5
   overlay_img: headers/ai-future.jpg
