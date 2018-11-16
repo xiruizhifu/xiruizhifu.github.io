@@ -58,11 +58,11 @@ ol li {
 }
 
 .col-lg-4 {
-  max-width: 29%;
+  width: 29%;
 }
 
 .col-lg-8 {
-  max-width: 71%;
+  width: 71%;
 }
 
 .col-lg-12 {

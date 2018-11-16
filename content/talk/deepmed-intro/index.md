@@ -2,7 +2,7 @@
 abstract: DeepMed is a deep learning framework for Medicine and Healthcare written in Python and uses PyTorch as the backend autograd engine 🚀.
 abstract_short: DeepMed is a deep learning framework for Medicine and Healthcare written in Python and it uses PyTorch as the backend engine 🚀.
 authors: [Yajie Zhu]
-date: "2018-11-16T00:00:00"
+date: "2019-02-02T00:00:00"
 draft: false
 event: Informal Talks
 event_url: 
@@ -11,13 +11,11 @@ image:
   focal_point: Right
 location: Oxford, United Kingdom
 math: true
-projects:
-- 
 selected: false
 slides: deepmed-intro
 tags: ["Deep Learning", "Medicine", "Healthcare"]
-time_end: "2018-11-16T16:00:00"
-time_start: "2018-11-16T15:00:00"
+time_end: "2019-02-02T16:00:00"
+time_start: "2019-02-02T15:00:00"
 title: Deep Learning for Medicine and Healthcare
 url_code: ""
 url_pdf: ""

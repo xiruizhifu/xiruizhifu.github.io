@@ -6,7 +6,7 @@ title: Deep Learning for Medicine and Healthcare
 
 # Deep Learning for Medicine and Healthcare
 
-[Deepmed Website](http://deepmedicine.wrh.ox.ac.uk)
+[Deepmed Website](http://dm)
 
 ---
 
@@ -104,6 +104,8 @@ utils
 - Retrive the patient data using very simple syntax;
 - Many more useful functions to make your life easier.
 
+[CPRD Example](http://dm/example/using-cprd-dataset.html)
+
 ---
 
 ## Working with UK Biobank Dataset
@@ -111,6 +113,8 @@ utils
 - Easily check the basic information about the UK Biobank dataset;
 - Extract patient information and health outcomes in a straightforward way;
 - Many more useful functions to make your life easier.
+
+[UK Biobank Example](http://dm/example/using-ukb-dataset.html)
 
 ---
 
@@ -145,55 +149,9 @@ utils
 
 </div>
 
----
-
-## Speaker Notes
-
-Add speaker notes to your presentation
-
-```markdown
-{{%/* speaker_note */%}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{%/* /speaker_note */%}}
-```
-
-Press the `S` key to view the speaker notes!
-
-{{< speaker_note >}}
-- Only the speaker can read these notes
-- Press `S` key to view
-{{< /speaker_note >}}
-
----
-
-{{< slide background-image="/img/boards.jpg" >}}
-
-## Custom Slide
-
-Customize the slide style and background
-
-```markdown
-{{</* slide background-image="/img/boards.jpg" */>}}
-{{</* slide background-color="#0000FF" */>}}
-{{</* slide class="my-style" */>}}
-```
-
----
-
-## Custom CSS Example
-
-Let's make headers navy colored.
-
-Create `assets/css/reveal_custom.css` with:
-
-```css
-.reveal section h1,
-.reveal section h2,
-.reveal section h3 {
-  color: navy;
-}
-```
+{{% fragment %}}
+[`deepmed.models` Documentation](http://dm/modules.html#subpackage-models)
+{{% /fragment %}}
 
 ---
 
@@ -201,4 +159,4 @@ Create `assets/css/reveal_custom.css` with:
 
 [Ask me anything](https://yajiez.me)
 
-[Online Documentation](http://deepmedicine.wrh.ox.ac.uk)
+[Online Documentation](http://dm)
