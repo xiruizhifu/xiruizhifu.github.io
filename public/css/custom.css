@@ -186,3 +186,7 @@ code {
 .card-desription a {
   font-size: 0.75rem;
 }
+
+.hero-title {
+  line-height: 1.6;
+}
