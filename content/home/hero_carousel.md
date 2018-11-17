@@ -14,7 +14,7 @@ item:
   overlay_color: '#666'
   overlay_filter: 0.5
   overlay_img: headers/bubbles-wide.jpg
-  title: Deep Learning for Healthcare<br><br>
+  title: Deep Learning for Healthcare<br>
 - align: center
   content: SmartAI is a smart Python Library for Artificial Intelligence uses PyTorch
     as the backend autograd engine :rocket:<br><br>
@@ -25,7 +25,7 @@ item:
   overlay_color: '#666'
   overlay_filter: 0.5
   overlay_img: headers/ai-future.jpg
-  title: Smart AI for a better future<br><br>
+  title: Smart AI for a better future<br>
 # - align: left
 #   content: Oxford Martin Programme on Deep Medicine is using some of the largest and
 #     most complex biomedical datasets that have ever been collected to gain insights
