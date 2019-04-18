@@ -1,5 +1,5 @@
 ---
-active: false
+active: true
 date: "2017-10-15T00:00:00+01:00"
 height: 600px
 interval: 5000
